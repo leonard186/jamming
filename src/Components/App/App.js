@@ -10,27 +10,32 @@ class App extends Component {
     this.state = {
       searchResults: [{name: '1XYZ', artist: 'z1xyy', album: 'To1day'},
                       {name: 'XYZ', artist: 'zxyy', album: 'Today'}],
-      playlistName: 'Unknown playlist',
+      playlistName: 'My playlist',
       playlistTracks: [{name: '1XYZ', artist: 'z1xyy', album: 'To1day'},
                       {name: 'XYZ', artist: 'zxyy', album: 'Today'}]
                   };
     this.addTrack = this.addTrack.bind(this);
-    this.removeTrack = this.removeTrack.bind(this)
+    this.removeTrack = this.removeTrack.bind(this);
+    this.updatePlaylistName = this.updatePlaylistName.bind(this);
   }
 
   addTrack(track){
     let tracks = this.state.playlistTracks;
     tracks.map(song => {
-      if(song.name !== track.id){
+      if(song.id === track.id){
        let newPlaylist = tracks.concat(track);
-       this.setState({playlistTracks: newPlaylist})
+       this.setState({playlistTracks: newPlaylist});
       }
     })
   }
 
   removeTrack(track) {
-    let updatedPlaylist = this.state.playlistTracks.filter(song => song !== track.id);
+    let updatedPlaylist = this.state.playlistTracks.filter(song => song.id !== track.id);
     this.setState({playlistTracks: updatedPlaylist})
+  }
+
+  updatePlaylistName(name){
+    this.setState({playlistName: name})
   }
 
   render() {
@@ -41,7 +46,7 @@ class App extends Component {
           <SearchBar />
           <div className="App-playlist">
             <SearchResults onAdd={this.addTrack} searchResults={this.state.searchResults}/>
-            <Playlist onRemove={this.removeTrack} playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
+            <Playlist onNameChange={this.updatePlaylistName} onRemove={this.removeTrack} playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
           </div>
         </div>
       </div>
