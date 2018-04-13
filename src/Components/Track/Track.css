@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 72px;
+  height: 95px;
 }
 
 .Track-information h3 {
@@ -31,4 +31,60 @@
   font-size: .83rem;
   font-weight: 300;
   color: rgba(256, 256, 256, 0.8);
+  margin-bottom: .22rem;
+}
+ .preview {
+ color: red !important;
+ font-size: 80% !important;
+ text-align: center;
+ margin:  0 0.4rem 0 0.7rem;
+ }
+
+.preview:hover {
+  cursor: pointer !important;
+}
+
+.preview.no:hover {
+  cursor: not-allowed !important;
+}
+
+.preview:active {
+  font-size: 75%;
+}
+
+.popularity {
+  margin-right: 0.7rem;
+  font-size: 60%;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.very-popular {
+  background-color: green;
+  color: orange;
+}
+
+.popular {
+  background-color: blue;
+  color: yellow;
+}
+
+.less-popular {
+  background-color: orange;
+  color: black;
+}
+
+.very-unpopular {
+  background-color: red;
+  color: blue;
+}
+
+@media only screen and (max-width: 570px) {
+  .Track {
+    font-size: 70%;
+  }
+  .Track-information p {
+    font-size: .70rem;
+  }
 }
