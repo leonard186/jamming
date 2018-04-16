@@ -47,7 +47,7 @@ class Track extends React.Component {
     renderPopularity(){
       console.log('Popularity index for ' + this.props.track.artist + ' | ' + this.props.track.name + ' is | ' + this.props.track.popularity + ' |');
       if(this.props.track.popularity >= 80){
-       return <p onMouseOver={this.onMouseOver} className='popularity very-popular'>Very<br/>Popular</p>
+       return <p className='popularity very-popular'>Very<br/>Popular</p>
      }else if(this.props.track.popularity >= 50 && this.props.track.popularity <= 79){
         return <p className='popularity popular'>Popular</p>
       } else if (this.props.track.popularity >= 20 && this.props.track.popularity <= 49){

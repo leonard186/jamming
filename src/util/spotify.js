@@ -1,6 +1,6 @@
-const clientId ='ea9e5326c33b44fe9030cc0ff11e822a';
+const clientId ='not publicly available';
 const authorizeUri = 'https://accounts.spotify.com/authorize';
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'http://spm_jamming.surge.sh';
 const requestUrl = `${authorizeUri}?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&scope=playlist-modify-public`;
 let userAccessToken;
 

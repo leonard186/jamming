@@ -23,12 +23,12 @@ class App extends Component {
   addTrack(track) {
      let tracks = this.state.playlistTracks.concat(track);
      this.setState({ playlistTracks: tracks });
-   }
+  }
 
   removeTrack(track) {
     const updatedPlaylist = this.state.playlistTracks.filter(song => song.id !== track.id);
     this.setState({playlistTracks: updatedPlaylist})
-}
+  }
 
   updatePlaylistName(name){
     this.setState({playlistName: name})
