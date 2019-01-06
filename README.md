@@ -9,7 +9,7 @@ This Web Application allows users to search the Spotify library, create a custom
 
 This project was built as part of the [Build Front-End Apps from Scratch course](https://www.codecademy.com/pro/intensive/build-frontend-web-apps-from-scratch?ubv=upgrdsbws).
 
-### Basic features:
+### Features:
 
 * Spotify Login — the first time a user searches for a song, album, or artist, Spotify will ask them to log in or set up a new account.
 
@@ -25,8 +25,6 @@ Spotify library.
 * Change Playlist Title — users can change the title of their custom playlist.
 
 * Save Playlist to Account — users can save their custom playlist by clicking a button called SAVE TO SPOTIFY.
-
-### Extra features:
 
 * Pressing enter triggers searches
 
